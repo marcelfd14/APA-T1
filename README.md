@@ -1,6 +1,7 @@
 # Primera tasca APA 2023: Anàlisi fitxer de so
 
-## Nom i cognoms:
+## Nom i cognoms: Sonia Sahuquillo Guillén   
+##                Marcel Farelo de la Orden
 
 ## Representació temporal i freqüencial de senyals d'àudio
 
@@ -104,14 +105,46 @@ plt.show()                            # Per mostrar els grafics
 
 ## Proves i exercicis a fer i entregar
 
-1. Reprodueix l'exemple fent servir diferents freqüències per la sinusoide. Al menys considera $f_x = 4$ kHz, a banda d'una
-    freqüència pròpia en el marge audible. Comenta els resultats.
+--- 
+1. Reprodueix l'exemple fent servir diferents freqüències per la sinusoide. Al menys considera $f_x = 4$ kHz, a banda d'una freqüència pròpia en el marge audible. Comenta els resultats.
+
+- Per **fx = 100 Hz:**
+![Alt text](img/F100.png)
+![Alt text](img/F100_2.png)
+- Per **fx = 500 Hz:**
+![Alt text](img/F500-1.png)
+![Alt text](img/F500_2-1.png)
+
+- Per **fx = 2000 Hz:**
+![Alt text](img/F2000.png)
+![Alt text](img/F2000_2.png)
+
+- Per **fx = 4000 Hz:**
+![Alt text](img/F4000.png)
+![Alt text](img/F4000_2.png)
+
+
+**Com podem veure a les gràfiques, la senyal és més aguda quan més alta és la freqüència. El periode també disminueix ja que és inversament proporcional a la freqüència.**
+
+**Com no hem modificat la freqüència de mostratge, les gràfiques cada vegada es veuen menys detallades.**
+
+**Als altres gràfics tenim Ls, que son el nombre de mostres corresponents a 5 períodes de la sinusoide. Ls va disminuint cada vegada que augmentem fx.
+Als gràfics també es poden veure els harmònics de la senyal, i cada vegada que augmentem aquesta frequencia l' amplitud dels pics que té la senyal disminueixen.**
+
+--- 
 
 2. Modifica el programa per considerar com a senyal a analitzar el senyal del fitxer wav que has creat (`x_r, fm = sf.read('nom_fitxer.wav')`).
 
     - Insereix a continuació una gràfica que mostri 5 períodes del senyal i la seva transformada.
 
     - Explica el resultat del apartat anterior.
+
++ **Es el mateix que hem fet a l'exercici anterior, però ara creant els gràfics a través de la senyal x_r.**
+
+![Alt text](img/Ex3-1.png) ![Alt text](img/F500.png)
+![Alt text](img/F500_2.png)  
+
+---
 
 3. Modifica el programa per representar el mòdul de la Transformada de Fourier en dB i l'eix d'abscisses en el marge de
     $0$ a $f_m/2$ en Hz.
@@ -131,6 +164,12 @@ plt.show()                            # Per mostrar els grafics
     >
     > $f_k = \frac{k}{N} f_m$
 
+![Alt text](img/Ex3.png)
+
++ **A una freqüència de 440 Hz podem veure el lòbul amb l'amplitud més gran. El càlcul de l'amplitud dona 1, que seria 0 dB com es pot veure al gràfic.**
+
+---
+
 4. Tria un fitxer d'àudio en format wav i mono (el pots aconseguir si en tens amb altres formats amb el programa Audacity).
     Llegeix el fitxer d'àudio i comprova:
 
@@ -139,6 +178,16 @@ plt.show()                            # Per mostrar els grafics
     - Tria un segment de senyal de 25ms i insereix una gráfica amb la seva evolució temporal.
     - Representa la seva transformada en dB en funció de la freqüència, en el marge $0\le f\le f_m/2$.
     - Quines son les freqüències més importants del segment triat?
+
+**Freqüència de mostratge de la cançó: 44100**
+**Nombre de mostres del senyal: 1102**
+
+![Alt text](img/Ex4-3.png)
+!![Alt text](img/Ex4_2.png)
+
+- **Les freqüències més importants del segment triat son les que estan al voltant de 500 Hz.**
+
+---
 
 ## Entrega
 
